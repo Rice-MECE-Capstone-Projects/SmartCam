@@ -18,6 +18,9 @@ The leader car do the navigation in indoor condition.
 
 ### Step 1: Hardware Choosing and Assembling
 
+For the hardware, we used Hiwonder MentorPi M1 Robot car as the leader. Refer below documentation for Hiwonder
+https://docs.hiwonder.com/projects/MentorPi/en/latest/docs/1.getting_ready.html
+
 ---
 
 ### Step 2: Software Programming
