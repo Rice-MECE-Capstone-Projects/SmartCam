@@ -22,12 +22,24 @@ The leader car do the navigation in indoor condition.
 
 ### Step 2: Software Programming
 
-Open the file `MODEL_TRAIN.py` and configure the following:
+Run these commands inside the `leaser_car/ros2_ws` directory to build the SLAM packages and source the environment.
 
-- **Dataset path:** Set the `"data"` field to the full path of your `data.yaml` file.  
-- **Device:** Set `device = 0` to use GPU (set `device = 'cpu'` if no GPU is available).  
-- **Epochs:** We use 50 epochs for training.
+```zsh
+# Build the workspace with symlink installation
+colcon build --symlink-install
 
+# To run the leader car run below commands in the terminal
+ros2 launch controller controller.launch.py
+ros2 run teleop_ctrl teleop_ctrl	# Control the robot with the help of keyboard keys as instructed in the same terminal
+
+# Source the overlay (using ZSH)
+source install/setup.zsh
+
+# To run LiDAR based SLAM, follow the commands in the terminal
+sudo apt install ros-humble-toolbox		# to install SLAM toolbox
+ros2 launch slam slam.launch.py			# to launch slam file
+ros2 launch slam rviz_slam.launch 		# to visualize the slam map in rviz2
+```
 ---
 
 ## Follower Car
