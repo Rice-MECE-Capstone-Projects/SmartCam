@@ -32,9 +32,13 @@ Open the file `MODEL_TRAIN.py` and configure the following:
 
 ## Follower Car
 
-The leader car do the navigation in indoor condition. 
+The follower car carry goods and chase the leader car. 
 
 ### Step 1: Hardware Choosing and Assembling
+
+We choose the car "Exceed RC Rally Monster Short Course Truck" as the follower. Here is one of the purhase link: https://www.ebay.com/itm/186666765799
+
+
 
 ---
 
