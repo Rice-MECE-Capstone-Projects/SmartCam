@@ -53,7 +53,8 @@ The follower car carry goods and chase the leader car.
 
 We choose the car "Exceed RC Rally Monster Short Course Truck" as the follower. Here is one of the purhase link: https://www.ebay.com/itm/186666765799
 
-
+We use Raspberry Pi 4 Model B as the controller
+![Raspberry Pi 4 Model B](images/Raspberry Pi 4 Model B.png)
 
 ---
 
