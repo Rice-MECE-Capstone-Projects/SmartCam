@@ -9,7 +9,6 @@ The project contains 2 modules, including leader car and follower car. When deve
 ## Developing History
 
 
-
 ---
 
 ## Leader Car
@@ -55,7 +54,7 @@ We choose the car "Exceed RC Rally Monster Short Course Truck" as the follower. 
 
 We use Raspberry Pi 4 Model B as the controller
 
-<img src="images/raspberry_pi_4_model_b.jpeg" width="400">
+<img src="images/Raspberry_Pi_4_Model_B.jpeg" width="400">
 
 ---
 
