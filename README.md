@@ -44,6 +44,10 @@ ros2 launch slam rviz_slam.launch 		# to visualize the slam map in rviz2
 ```
 ---
 
+### Note
+
+Since we did not complete the work of self-navigation part. When making follower car to chase the leader, please use keyboard to control the leader-car. 
+
 ## Follower Car
 
 The follower car carry goods and chase the leader car. 
@@ -103,7 +107,12 @@ We use Intel Depth Camera D415 and 2 normal Web Cameras for vision. Please conne
 
 ### Step 2: Software Programming
 
-Open the file `MODEL_TRAIN.py` and configure the following:
+Please first run "Code on Jetson Orin Nano.py", and make sure that 3 cameras vision are all activated. 
+
+Put the Follower RC-Car on the Ground, and the leader car should be ahead of the follower.
+<img src="images/Leader Car and Follower Car.jpeg" width="400">
+
+Run "Code on Raspberry Pi4.py". Use keyboard control to make the leader-car move forward, and you will see the follower car chasing the leader. 
 
 ## Reports
 As of May 5th, 2025, this project includes 2 reports:
