@@ -55,7 +55,7 @@ We choose the car "Exceed RC Rally Monster Short Course Truck" as the follower. 
 
 We use Raspberry Pi 4 Model B as the controller
 
-![Raspberry Pi 4 Model B](images/Raspberry_Pi_4_Model_B.jpeg)
+<img src="images/raspberry_pi_4_model_b.jpeg" width="400">
 
 ---
 
