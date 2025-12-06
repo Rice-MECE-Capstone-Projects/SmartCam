@@ -84,6 +84,15 @@ After finishing the wiring of ESC and Servo, please start the wiring of Jetson O
 
 Before assembling and wiring, please refer the GPIO map of the Jetson Orin Nano. Here is the <a href="https://jetsonhacks.com/nvidia-jetson-orin-nano-gpio-header-pinout/">link</a>
 
+Jetson Orin Nano needs communication with Rapsberry Pi. Please use Female-to-Female Dupont Wires: 
+
+UART1_TX (Jetson) - GPIO 15 (RXD)(RPi)
+
+UART1_RX (Jetson) - GPIO 14 (TXD)(RPi)
+
+Please use a USB hub
+
+<img src="images/USB hub.jpg" width="400">
 
 
 ---
