@@ -65,6 +65,13 @@ Black port - GPIO 18 (PCM_CLK)
 
 <img src="images/Ports of ESC.jpeg" width="400">
 
+The Servo controls the direction of the RC-Car. To connect ESC with RPi, please use Male-to-Female Dupont Wires
+Brown port - Ground
+Red port - 5V
+Yellow port - GPIO 13 (PWM_1)
+
+<img src="images/Ports of Servo.jpeg" width="400">
+
 
 ---
 
