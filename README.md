@@ -90,9 +90,9 @@ UART1_TX (Jetson) - GPIO 15 (RXD)(RPi)
 
 UART1_RX (Jetson) - GPIO 14 (TXD)(RPi)
 
-Please use a USB hub
+Please use a USB hub to connect the Jetson Orin Nano
 
-<img src="images/USB hub.jpg" width="400">
+<img src="images/USB hub.jpeg" width="400">
 
 
 ---
