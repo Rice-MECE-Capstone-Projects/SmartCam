@@ -64,7 +64,7 @@ Black port - Ground
 
 Red port - (None)
 
-Black port - GPIO 18 (PCM_CLK)
+White port - GPIO 18 (PCM_CLK)
 
 <img src="images/Ports of ESC.jpeg" width="400">
 
@@ -77,6 +77,13 @@ Red port - 5V
 Yellow port - GPIO 13 (PWM_1)
 
 <img src="images/Ports of Servo.jpeg" width="400">
+
+After finishing the wiring of ESC and Servo, please start the wiring of Jetson Orin Nano
+
+<img src="images/Jetson_Orin_Nano.jpeg" width="400">
+
+Before assembling and wiring, please refer the GPIO map of the Jetson Orin Nano. Here is the <a href="https://jetsonhacks.com/nvidia-jetson-orin-nano-gpio-header-pinout/">link</a>
+
 
 
 ---
