@@ -92,7 +92,11 @@ UART1_RX (Jetson) - GPIO 14 (TXD)(RPi)
 
 Please use a USB hub to connect the Jetson Orin Nano
 
-<img src="images/USB hub.jpeg" width="400">
+<img src="images/USB hub.jpg" width="400">
+
+We use Intel Depth Camera D415 and 2 normal Web Cameras for vision. Please connect them with the USB hub. 
+
+<img src="images/Cameras.jpeg" width="400">
 
 
 ---
