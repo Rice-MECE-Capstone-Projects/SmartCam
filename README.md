@@ -108,6 +108,7 @@ We use Intel Depth Camera D415 and 2 normal Web Cameras for vision. Please conne
 ### Step 2: Software Programming
 
 Please first run "Code on Jetson Orin Nano.py", and make sure that 3 cameras vision are all activated. 
+<img src="images/Camera Visions.jpeg" width="400">
 
 Put the Follower RC-Car on the Ground, and the leader car should be ahead of the follower.
 <img src="images/Leader Car and Follower Car.jpeg" width="400">
