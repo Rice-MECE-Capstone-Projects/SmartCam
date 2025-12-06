@@ -116,6 +116,8 @@ Put the Follower RC-Car on the Ground, and the leader car should be ahead of the
 Run "Code on Raspberry Pi4.py". Use keyboard control to make the leader-car move forward, and you will see the follower car chasing the leader. 
 
 ## Reports
-As of May 5th, 2025, this project includes 2 reports:
+As of Dec 5th, 2025, this project includes 2 reports:
 - Mid-term Report - 2025 Spring Semester
 - Final-term Report - 2025 Spring Semester
+- Mid-term Report - 2025 Fall Semester
+- Final-term Report - 2025 Fall Semester
