@@ -56,7 +56,7 @@ We use Raspberry Pi 4 Model B as the controller
 
 <img src="images/Raspberry_Pi_4_Model_B.jpeg" width="400">
 
-Before assembling and wiring, please refer the GPIO map of the RPi4 Model B. Here is the <a href="https://www.google.com/search?q=raspberry+pi+4+Model+B+GPIO+map&sca_esv=e4f071505be2a160&ei=DbQzae-1EK-BqtsPga6o8QM&ved=0ahUKEwiv8P3wkqiRAxWvgGoFHQEXKj4Q4dUDCBE&uact=5&oq=raspberry+pi+4+Model+B+GPIO+map&gs_lp=Egxnd3Mtd2l6LXNlcnAiH3Jhc3BiZXJyeSBwaSA0IE1vZGVsIEIgR1BJTyBtYXAyBhAAGBYYHjILEAAYgAQYhgMYigUyCxAAGIAEGIYDGIoFMggQABiABBiiBDIFEAAY7wUyCBAAGIAEGKIEMggQABiABBiiBDIIEAAYgAQYogRIjR1QkgNYwhtwAXgBkAEAmAFzoAG-CKoBBDE2LjG4AQPIAQD4AQGYAhKgAvIIwgIKEAAYsAMY1gQYR8ICDRAAGIAEGLADGEMYigXCAg4QABiwAxjkAhjWBNgBAcICFhAuGIAEGLADGEMY5QQYyAMYigXYAQHCAgoQABiABBhDGIoFwgINEC4YgAQYQxjlBBiKBcICBRAAGIAEwgIIEC4YgAQY5QTCAhcQLhiABBjlBBiXBRjcBBjeBBjgBNgBAcICCxAAGIAEGJECGIoFmAMAiAYBkAYSugYGCAEQARgJkgcEMTcuMaAH4XmyBwQxNi4xuAftCMIHBjAuMTcuMcgHJQ&sclient=gws-wiz-serp#vhid=ibWenrAtbGTKYM&vssid=_E7QzadEIxaKq2w-yy7PwCw_41">link</a>
+Before assembling and wiring, please refer the GPIO map of the RPi4 Model B. Here is the <a href="https://learn.sparkfun.com/tutorials/introduction-to-the-raspberry-pi-gpio-and-physical-computing/gpio-pins-overview">link</a>
 
 
 
