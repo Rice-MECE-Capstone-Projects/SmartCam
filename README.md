@@ -59,15 +59,21 @@ We use Raspberry Pi 4 Model B as the controller
 Before assembling and wiring, please refer the GPIO map of the RPi4 Model B. Here is the <a href="https://learn.sparkfun.com/tutorials/introduction-to-the-raspberry-pi-gpio-and-physical-computing/gpio-pins-overview">link</a>
 
 The ESC controls the speed of the RC-Car. To connect ESC with RPi, please use Male-to-Female Dupont Wires
+
 Black port - Ground
+
 Red port - (None)
+
 Black port - GPIO 18 (PCM_CLK)
 
 <img src="images/Ports of ESC.jpeg" width="400">
 
 The Servo controls the direction of the RC-Car. To connect ESC with RPi, please use Male-to-Female Dupont Wires
+
 Brown port - Ground
+
 Red port - 5V
+
 Yellow port - GPIO 13 (PWM_1)
 
 <img src="images/Ports of Servo.jpeg" width="400">
