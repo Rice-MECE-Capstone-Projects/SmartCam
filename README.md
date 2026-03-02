@@ -1,8 +1,8 @@
 # About this Project
 
-This project is focusing on self-navigation smart RC-cars system. Started from spring semester, 2025. For the exact development history, please check the Chapter "Developing History".
+This project focuses on a self-navigation smart RC-cars system. Started from spring semester of 2025. For the exact development history, please check the Chapter "Developing History".
 
-The project contains 2 modules, including leader car and follower car. When developing the system, please first refer the chapter "Leader Car", and then refer the chapter "Follower Car". 
+The project contains 2 robot cars and a central server. When developing the system, please first refer to the chapter "...", and then refer to the chapter "...". 
 
 ---
 
