@@ -1,4 +1,4 @@
-# ROS 2 Leader Car & SLAM Setup
+# ROS 2 SLAM Setup
 
 This documentation outlines the steps to build the workspace, run the leader car controller, and perform LiDAR-based SLAM.
 
