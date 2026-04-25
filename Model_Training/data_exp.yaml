@@ -1,0 +1,5 @@
+train: C:/finalproject/smartcam/Indoor Obstacle.yolov8/experiment_dataset/train/images
+val: C:/finalproject/smartcam/Indoor Obstacle.yolov8/experiment_dataset/valid/images
+
+nc: 7
+names: ['chair', 'door', 'person', 'shelf', 'stair', 'table', 'wardrobe']
