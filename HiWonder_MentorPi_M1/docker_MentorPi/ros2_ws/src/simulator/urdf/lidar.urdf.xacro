@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<robot name="lidar_a1" xmlns:xacro="http://ros.org/wiki/xacro" >
+  <xacro:property name="M_PI" value="3.1415926535897931"/>
+  <link name="lidar_frame" />
+  <joint
+    name="lidar_frame"
+    type="fixed">
+    <origin xyz="0 0 0" rpy="0 0 ${M_PI}" />
+    <parent link="lidar_link" />
+    <child link="lidar_frame" />
+  </joint>
+
+  <gazebo reference="lidar_Link">
+    <sensor type="ray" name="lidar">
+      <update_rate>20</update_rate>
+      <ray>
+        <scan>
+          <horizontal>
+            <samples>720</samples>
+            <min_angle>-3.14159</min_angle>
+            <max_angle>3.14159</max_angle>
+          </horizontal>
+        </scan>
+        <range>
+          <min>0.12</min>
+          <max>12.0</max>
+          <resolution>0.01</resolution>
+        </range>
+      </ray>
+      <plugin name="gazebo_ros_ray" filename="libgazebo_ros_ray_sensor.so">
+        <ros>
+          <remapping>scan:=/scan</remapping>
+        </ros>
+        <frame_name>lidar_Link</frame_name>
+      </plugin>
+    </sensor>
+  </gazebo>
+
+</robot>
