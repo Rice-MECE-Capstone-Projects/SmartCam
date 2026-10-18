@@ -105,7 +105,7 @@ def main():
     output.parent.mkdir(parents=True, exist_ok=True)
 
     with output.open("w", newline="") as f:
-        writer = csv.DictWriter(f, fieldnames=list(rows[0].keys()))
+        writer = csv.DictWriter(f, fieldnames=list(rows[0].keys()), lineterminator="\n")
         writer.writeheader()
         writer.writerows(rows)
 
