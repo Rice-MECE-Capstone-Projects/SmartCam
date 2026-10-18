@@ -1,0 +1,43 @@
+# Python
+__pycache__/
+*.py[cod]
+*.bak
+.pytest_cache/
+.venv/
+venv/
+
+# ROS 2
+build/
+install/
+log/
+
+# Data
+datasets/
+rosbags/
+logs/
+checkpoints/
+training_run*/
+runs/
+outputs/
+plans/
+
+# Models and recordings
+*.safetensors
+*.pt
+*.pth
+*.ckpt
+*.onnx
+*.db3
+*.mcap
+*.sqlite3
+*.bag
+
+# Archives and secrets
+*.zip
+*.tar
+*.tar.gz
+.env
+.env.*
+!.env.example
+*.pem
+*.key
