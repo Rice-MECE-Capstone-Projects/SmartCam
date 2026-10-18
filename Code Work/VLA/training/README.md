@@ -53,3 +53,25 @@ One partial Gazebo demonstration, 340 frames.
 
 Raw datasets and model checkpoints are excluded
 from GitHub.
+
+## Checkpoint Verification
+
+Verified on October 18, 2026.
+
+The 100-step checkpoint was successfully reloaded
+using the AutoTeacher model verification command.
+
+- Dataset index: 20
+- Task: Go to the blue object.
+- Predicted linear velocity: 0.084456 m/s
+- Predicted angular velocity: 0.047440 rad/s
+- Single cold inference: 0.782 s
+- ROS velocity commands sent: 0
+- Status: OFFLINE_2D_CHECKPOINT_RELOAD_PASS
+
+This verifies checkpoint loading and finite 2D
+action prediction, not real-time performance,
+navigation success, or deployment safety.
+
+The local JSON verification record is stored
+outside the Git repository.
