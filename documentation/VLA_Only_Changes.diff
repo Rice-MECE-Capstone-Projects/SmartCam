@@ -1,0 +1,64 @@
+--- before/main.tex
++++ after/main.tex
+@@ -76,38 +76,9 @@
+ 
+ Training follows a curriculum that progresses from basic goal reaching and single-obstacle avoidance to randomized clutter and moving-obstacle scenarios. The current mixed curriculum assigns approximately 55\% of episodes to complex static scenes, 35\% to basic navigation tasks, and 10\% to dynamic-obstacle scenes. In the planned integrated system, SLAM will provide a corrected robot pose for computing the relative waypoint given to the PPO policy, allowing the robot to perform local waypoint-to-waypoint navigation while mapping continues online. The next stage is to transfer this policy to the physical MentorPi and reduce sim-to-real differences in LiDAR sensing, robot motion, and control latency.
+ 
+-\subsection{Vision-Language-Action (VLA) Pipeline: Steve Xiang}\label{sec:vla}
+-
+-To explore demonstration-based mobile-robot control alongside PPO, Steve Xiang (Chenghao Xiang)
+-implemented an auditable Gazebo-to-SmolVLA workflow. A rule-based RGB
+-tracker generated bounded differential-drive commands
+-$(v,\omega)$, while LiDAR provided slowdown and stopping constraints.
+-AutoTeacher recorded camera, LiDAR, odometry, and control streams in
+-ROS~2 bags; synchronized observations and actions were audited and
+-converted into LeRobot data. We selected SmolVLA~\cite{shukor2025smolvla}
+-for its LeRobot/PyTorch compatibility and practical fine-tuning on our
+-NVIDIA RTX~3070 (8~GB) GPU, rather than from a head-to-head navigation benchmark.
+-
+-The initial blue-target collection yielded 340 frames at 10~Hz in one
+-\emph{partial} episode. We ran 100 BF16 optimization steps with batch
+-size one and a frozen vision encoder, then reloaded the checkpoint.
+-Across nine frames sampled from that \emph{same training episode}, the
+-mean absolute errors (MAEs) relative to teacher commands were
+-0.0141~m/s for linear velocity and 0.0281~rad/s for angular velocity
+-(Fig.~\ref{fig:smartcam_vla_velocity}). Initial turning and stopping
+-remain notable error modes. These \emph{in-sample offline action imitation results}
+-validate the data/training/inference workflow, not goal-reaching,
+-task success, generalization, or closed-loop VLA navigation. The trained
+-VLA has not controlled the simulated or physical robot, and no physical
+-robot deployment is claimed. Next steps include
+-verified demonstrations, held-out episodes, and read-only shadow tests.
+-
+-\begin{figure}[!t]
+-    \centering
+-    \includegraphics[width=\columnwidth]{images/vla_offline_velocity_comparison_ieee.pdf}
+-    \caption{Rule-based teacher commands and SmolVLA offline predictions on nine frames from the training trajectory: (a) linear velocity and (b) angular velocity. Dashed curves connect sampled predictions; this is not a closed-loop navigation result.}
+-    \label{fig:smartcam_vla_velocity}
+-\end{figure}
++\subsection{Vision-Language-Action (VLA) Pipeline}\label{sec:vla}
++
++A Gazebo and ROS~2 simulation pipeline supports demonstration-based control alongside PPO. A rule-based RGB target-tracking teacher generates bounded differential-drive commands $(v,\omega)$, with LiDAR-based slowing and stopping. AutoTeacher records camera, LiDAR, odometry, control commands, and simulation time in ROS bags. Audited, time-aligned observations and actions are converted to LeRobot datasets. SmolVLA~\cite{shukor2025smolvla} was selected for LeRobot/PyTorch compatibility and feasible fine-tuning on an NVIDIA RTX~3070 (8~GB) workstation. The teacher demonstrations use rule-based control; learned VLA predictions are evaluated offline.
+ 
+ \subsection{Communication Architecture: Socket to ROS2}
+ 
+@@ -206,6 +177,19 @@
+ \end{tabularx}
+ \end{table}
+ 
++\subsection{VLA Offline Evaluation}\label{sec:vla-eval}
++
++One \emph{partial} blue-target demonstration yielded 340 frames at 10~Hz. SmolVLA was fine-tuned for 100 BF16 steps with batch size~1 and a frozen vision encoder; the resulting checkpoint was successfully reloaded. On nine sampled frames from the \emph{same training episode} (indices 0, 20, 50, 100, 150, 200, 250, 300, and 339), linear and angular velocity MAEs relative to teacher commands were 0.0141~m/s and 0.0281~rad/s, respectively (Fig.~\ref{fig:smartcam_vla_velocity}). Initial turning and stopping remain error modes.
++
++These are \emph{in-sample offline action imitation results}, not evidence of successful closed-loop VLA navigation, generalization, or physical robot deployment. Goal completion was not verified, and the trained VLA has not controlled the simulated or physical robot.
++
++\begin{figure}[!t]
++    \centering
++    \includegraphics[width=\columnwidth]{images/vla_offline_velocity_comparison_ieee.pdf}
++    \caption{Rule-based teacher commands and SmolVLA offline predictions on nine frames from the same training episode: (a) linear velocity and (b) angular velocity. Dashed curves connect sampled predictions; this is an in-sample action comparison, not a closed-loop navigation result.}
++    \label{fig:smartcam_vla_velocity}
++\end{figure}
++
+ \subsection{Centralized map merging architecture}
+ 
+ To achieve multi-agent environmental awareness without exceeding the computational limits of the embedded hardware, a 2D pose-graph map-merging strategy is formalized. Rather than transmitting bandwidth-heavy 3D point clouds, the edge rovers use local SLAM algorithms to generate highly compressed 2D occupancy grids and serialized odometry graphs. The computational load of map merging will be offloaded to a central Jetson Orin Nano hub. This central server is tasked with applying graph-based backend optimization to detect geometric overlaps, establish inter-robot constraints, and elastically deform the independent local graphs into a single, unified global coordinate frame for campus-wide path planning.

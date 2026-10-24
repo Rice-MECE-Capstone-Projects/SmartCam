@@ -1,0 +1,4 @@
+\subsection{Vision-Language-Action (VLA) Pipeline}\label{sec:vla}
+
+A Gazebo and ROS~2 simulation pipeline supports demonstration-based control alongside PPO. A rule-based RGB target-tracking teacher generates bounded differential-drive commands $(v,\omega)$, with LiDAR-based slowing and stopping. AutoTeacher records camera, LiDAR, odometry, control commands, and simulation time in ROS bags. Audited, time-aligned observations and actions are converted to LeRobot datasets. SmolVLA~\cite{shukor2025smolvla} was selected for LeRobot/PyTorch compatibility and feasible fine-tuning on an NVIDIA RTX~3070 (8~GB) workstation. The teacher demonstrations use rule-based control; learned VLA predictions are evaluated offline.
+
